@@ -1,0 +1,84 @@
+.noticias{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.ultimaNoticia {
+    position: relative;
+    height: auto; 
+    border-radius: 18px;
+    width: 30%;
+    overflow: hidden;
+}
+
+.ultimaNoticia img{
+    width: 100%;
+    height: 320px;
+    object-fit: cover; 
+    border-radius: 18px;
+    transition: transform 0.3s ease;
+}
+
+.ultimaNoticia .informacion{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #26002b;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: white;
+    padding: 12px 20px;
+    height: 110px;
+}
+
+.datos{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.ultimaNoticia .categoria{
+    background-color: white;
+    color: #26002b;
+    padding: 2px 10px;
+    text-transform: capitalize;
+    border-radius: 12px;
+    font-size: 14px;
+}
+  
+.ultimaNoticia .fecha{
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0px;
+}
+  
+.ultimaNoticia h3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.ultimaNoticia:hover img{transform: scale(1.1);}
+
+ 
+@media (max-width: 1252px) {
+    .ultimaNoticia {width: 32%;}
+
+    .ultimaNoticia .informacion{
+        padding: 4px 15px;
+        height: 145px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .ultimaNoticia img{max-height: 250px;}
+    .ultimaNoticia .informacion{ padding: 10px;}
+}
+
+@media (max-width: 760px) {
+    .noticias {display: none;}
+}

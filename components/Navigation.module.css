@@ -1,0 +1,213 @@
+.skipLink {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  background: #000;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skipLink:focus {
+  left: 10px;
+  top: 10px;
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  margin: 0 10%;
+  margin-top: 20px;
+ }
+
+.menuIcon{ display: none; }
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{max-width:120px; }
+
+.redes{
+  display: flex;
+  gap: 18px;
+}
+
+.navigationEscritorio{
+  margin-top: 25px;
+  display:flex; 
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style:none; 
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #26002b;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.navigationEscritorio li {
+ position: relative; 
+ height: 60px;
+ display: flex;
+ align-items: center;
+}
+
+.navigationEscritorio .ayto {padding-left: 10px;}
+
+.navigationEscritorio .sede {
+  background-color: #4b0853;
+  padding: 0 10px;
+  border-top-right-radius: 15px;
+ }
+ 
+.paddingMenuEscritorio i{
+  font-size: 18px;
+  margin-right:15px;
+  color: white;
+}
+
+.navigationEscritorio .paddingMenuEscritorio a {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 0.5em;
+}    
+  
+.paddingMenuEscritorio a:hover{text-decoration: underline;}
+
+.submenuEscritorio{
+  display: none;
+  position: absolute;  
+  width: 280px;
+  top: 100%;
+  left: 0;
+  color: #222222;
+  background-color: #26002b;
+  border-top: 3px solid white;
+  box-shadow: 4px 4px 5px 2px rgba(185,185,185,0.54);
+   -webkit-box-shadow: 4px 4px 5px 2px rgba(185,185,185,0.54);
+   -moz-box-shadow: 4px 4px 5px 2px rgba(185,185,185,0.54);
+   border-bottom-left-radius: 15px;
+   border-bottom-right-radius: 15px;
+  box-sizing: border-box;
+  z-index: 1000;
+  margin: 0;
+  padding: 10px 20px;
+}
+
+li:hover .submenuEscritorio {
+  display: block;
+  list-style:none; 
+  line-height: 1.8;
+}
+
+.submenuEscritorio li {
+ display: flex;
+ align-items: center;
+ line-height: 1.3;
+ -webkit-column-break-inside: avoid;
+ page-break-inside: avoid;
+ break-inside: avoid;
+}
+
+@media (min-width: 1024px) {
+    .navigation{display: none;}
+}
+
+@media (max-width: 1024px) {
+   .flex .redes, .menuSecundario, .navigationEscritorio, .menuNoActive, .submenu{display: none;}
+
+    .header{ 
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 25px 2% 50px 2%;
+      position: relative;
+    } 
+
+    .header .flex{ margin: 0 5%;} 
+    .paddingMenu .flex{margin: 0px;}
+
+    .menuIcon {
+      display: flex; 
+      z-index: 2000;
+      margin-right: 5%;
+    }
+
+    .menuIcon i{
+      z-index: 2000;
+      font-size: 48px;
+    }
+
+    .menuActive{
+      position: absolute;
+      list-style:none; 
+      padding: 70px 20px 50px 20px;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left:0;
+      display: flex;
+      flex-direction: column;
+      z-index: 1000;
+      background-color: white;
+    }
+
+    .paddingMenu{
+      background-color: #26002b;
+      padding: 25px;
+    }
+
+    .menuActive li:first-child{
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+
+    .menuActive .sede{
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      background-color: #4b0853;
+    }
+
+    .paddingMenu a{ color: #fff;}
+
+    .paddingMenu i{
+      font-size: 24px;
+      margin-right: 10px;
+    }
+
+    .opcionPadre{
+      display: flex;
+      align-items: center;
+    }
+
+    .submenuActive {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      list-style:none;
+      padding:18px 0px 0px 35px;
+    }
+
+    .menuIcon .redes{
+      position: absolute;
+      top: 8px;
+      left: 7.5%;
+      gap: 10px;
+    }
+    
+    .menuIcon .redes a{background-color: white;}
+    
+    .menuIcon .redes i{
+      font-size: 24px;
+      color: #26002b;
+    }
+}
+
+@media (max-width: 760px) {
+  .header{ margin: 25px 0;} 
+}
+

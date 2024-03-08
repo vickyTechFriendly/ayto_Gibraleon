@@ -1,0 +1,142 @@
+.noticiasMovil {
+  display: block;
+  width: 100%;
+  position: relative;
+  margin: 30px auto;
+  padding: 0 5% 0 5%;
+}
+
+.noticiasMovil button{
+  background-color: #26002b;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  font-size: 24px;
+}
+
+.noticia{
+  position: relative;
+  height: auto; 
+  border-radius: 18px;
+  flex: 0 0 31%; 
+  margin-right: 20px;
+  scroll-snap-align: start;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.noticia img{
+  width: 100%;
+  height: 350px;
+  object-fit: cover; 
+  border-radius: 18px;
+  transition: transform 0.3s ease;
+}
+
+.noticia:hover img{transform: scale(1.1);}
+
+.sliderViewport{
+  overflow: hidden;
+  width: 100%; 
+}
+
+.sliderContainer{
+  display: flex;
+  overflow: hidden;
+  overflow: hidden;
+  width: 100%; 
+}
+
+.noticia .informacion{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #26002b;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  color: white;
+  padding: 18px 20px;
+  height: 150px;
+}
+
+.informacion .datos{
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.noticia .categoria{
+  display: inline;
+  font-size:14px;
+  background-color: #fff;
+  border-radius: 48px;
+  padding: 2px 15px;
+  font-weight: 500;
+  margin-right: 7.5px;
+  color: #1a171b;
+}
+
+.noticia .fecha{
+  margin-left: 7.5px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.noticia h3 {
+  color: white;
+  font-size: 21px;
+  font-weight: 500;
+  word-wrap: break-word; 
+  width: 100%; 
+}
+
+.sliderBtnPrev, .sliderBtnNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sliderBtnPrev {left: -15px;}
+.sliderBtnNext {right: -15px;}
+
+.sliderIndicators {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.sliderDot {
+  height: 10px;
+  width: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.sliderDotActive {background-color: #26002b; }
+
+
+@media (max-width: 820px) {
+  .noticia {flex: 0 0 48%;  }
+} 
+
+@media (max-width: 768px) {
+
+  .noticiasMovil {
+    width: 95%;
+    margin: 0 auto 30px auto;
+    padding: 0 0 0 5%;
+  }
+  
+  .sliderContainer {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; 
+    width: 94%; 
+  }
+}
+
+@media (max-width: 540px) {
+  .sliderBtnPrev, .sliderBtnNext{display: none;}
+  .noticia {flex: 0 0 85%; }
+}

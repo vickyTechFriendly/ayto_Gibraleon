@@ -1,0 +1,116 @@
+.footer{
+    background-color: #1a171b;
+    padding: 0px 5%;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 140px;
+}
+
+.footer .enlaces{
+    display:flex;
+    padding: 0 1rem;
+    border-right: 2px solid #fff;
+    border-left: 2px solid #fff;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0px;
+}
+
+.footer .enlaces a{
+    color: white;
+    background-color: #1a171b;
+    border-radius: 16px;
+    padding: 6px 16px 8px 16px;
+}
+
+.footer .enlaces a:hover{text-decoration: underline;}
+
+.footer .redes{
+    display:flex;
+    gap: 15px;
+}
+
+.footer .redes a:hover{
+    text-decoration: none;
+    border-radius: 50%;
+    outline: 2.5px solid #e7b421;
+}
+
+.footer .redes img{height: 28px;}
+
+.descripcion{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    text-align: center;
+    font-weight: 400;
+}
+
+.descripcion span{margin: 0 10px;}
+
+.footer img{
+    display: block;
+    margin: 0 auto;
+    max-width: 150px;
+}
+
+.footer .ayto{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer .ayto p{text-align: left;}
+.footer .ayto img{max-width: 60px;}
+
+
+@media (max-width: 1300px) {
+    .footer .enlaces{
+        gap: 5px;
+        margin: 0 20px;
+    }
+
+    .footer .ayto p{max-width: 200px;}
+}
+
+@media (max-width: 1135px) {
+    .footer .enlaces{
+        gap: 5px;
+        margin: 0 10px;
+        padding: 0px;
+    }
+
+    .footer .ayto{ gap: 15px;}
+}
+
+@media (max-width: 1066px) {
+    .footer{padding: 30px 5%;}
+    .footer .enlaces{gap: 0px;}
+}
+
+@media (max-width: 1024px) {
+    .footer{
+        flex-direction: column;
+        height: auto;
+        gap: 30px;
+    }
+
+    .footer .enlaces{
+        align-items: center;
+        border-right: none;
+        border-left: none;
+    }
+
+    .footer .ayto p{ max-width: 100%;}
+}  
+
+@media (max-width: 760px) {
+    .footer{ padding: 20px 5%;}
+    .footer .enlaces{  align-items: flex-start; }
+    .footer .enlaces a{ padding: 8px;}
+} 

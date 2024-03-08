@@ -1,0 +1,90 @@
+.areas{
+    display: block;
+    background-color: #e7e7e7;
+    border-radius: 15px;
+    padding: 5px 0px 0px 0px;
+    margin-bottom: 50px;
+}
+
+.areas ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style:none; 
+}
+
+.areas li{width: 14%;}
+.areas i{font-size: 24px;}
+  
+.areas a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 10px;
+    text-align: center;
+}
+  
+#menuList li{display: none;}
+
+.mas{ 
+    background-color: #f4f4f400;
+    color: #222222;
+    border: none;
+    margin: 0px auto 3px auto;
+    font-size:72px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.mas i{ font-size: 24px;}
+
+.menuItem {
+    display: block;
+    margin-bottom: 5px;
+}
+    
+.hiddenMenuItem {display: none;}
+
+.areas hr{
+    width: 95%;
+    margin: 10px auto;
+}
+
+.texto{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+  }
+
+@media (max-width: 1024px) {
+    .areas ul{justify-content: flex-start;}
+    .areas li{width: 20%;}
+    .areas{margin-bottom: 30px;}
+}
+  
+@media (max-width: 1013px) {
+    .areas li{padding: 0 50px;}
+}
+
+@media (max-width: 945px) {
+    .areas li{padding: 0 40px;}
+}
+
+@media (max-width: 875px) {
+    .areas li{padding: 0 30px;}
+}
+
+@media (max-width: 807px) {
+    .areas li{ padding: 0 20px;}
+}
+
+@media (max-width: 760px) {
+    .areas{margin-bottom: 20px;}
+    .areas li{
+        width: 50%;
+        padding: 0px;
+    }
+}

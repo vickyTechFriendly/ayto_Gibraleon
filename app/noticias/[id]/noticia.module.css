@@ -1,0 +1,229 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 10%;
+}
+
+.contenido{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 60px 0;
+}
+
+.listadoNoticias{
+    margin: 0px 15px 5px 0px;
+}
+
+.noticia .listadoNoticias h1{font-size: 32px; margin-bottom: 20px;}
+
+.listadoNoticias a{
+    text-align: right;
+    font-size: 21px;
+}
+
+.listadoNoticias a:hover{text-decoration: underline;}
+
+.noticia img{
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover; 
+    border-radius: 10px;
+}
+
+.noticia .datos{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.main .categoria{
+    display: inline;
+    font-size:14px;
+    background-color: #e7b421;
+    border-radius: 18px;
+    padding: 4px 30px 0px 30px;
+}
+
+.main .derecha{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e7e7e7;
+    padding: 4px 10px 3px 10px;
+    border-radius: 18px;
+    gap: 10px;
+}
+
+.noticia p{margin-top: 20px; line-height: 1.5;}
+
+.main .datos p{margin-top: 0px;}
+
+.main .derecha p{
+    border-right: 1px solid #1a171b;
+    padding-right: 10px;
+}
+
+.main .derecha img{border-radius: 0px;}
+
+.noticiaTexto {
+    margin-top: 50px;
+    white-space: pre-wrap;
+}
+
+.pdfSection{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.pdfSection a{ 
+    text-decoration: underline;
+    padding: 10px 15px; 
+}
+.pdfSection a:hover{ 
+    text-decoration: none;
+    background-color: #e7b421; 
+    border-radius: 10px;
+}
+
+.imagenes{
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    justify-content: flex-start; 
+    align-items: start;
+    gap: 10px;
+    width: 120px;
+}
+  
+.ultimasNoticias{ 
+    margin-top: 100px;
+    width: 90%;
+}
+
+.galeria{
+    padding: 0px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 50px;
+    width: 100%;
+}
+
+.imageContainer {cursor: pointer;}
+
+.imageContainer img{
+    width: 300px;
+    height: auto;
+}
+
+.fullscreenContainer {position: relative;}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.fullscreenImage {
+    max-width: 90%;
+    max-height: 90%;
+    cursor: pointer;
+}
+
+.clickableImage {cursor: pointer;}
+
+.closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #0051ba00;
+}
+
+.fullscreenOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreenImage {
+    max-width: 90%;
+    max-height: 90%;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .main { padding: 1rem 7.5%;}
+    .modal img {max-width: 700px;}     
+}
+
+@media (max-width: 820px) {
+    .listadoNoticias{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .listadoNoticias a{ text-align: start;}
+
+    .galeria{
+        margin-top: 30px;
+        flex-direction: column;
+    }
+    .imagenes{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start; 
+        gap: 10px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .imageContainer img{
+        max-width: 80px;
+        max-height: 50px;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {padding: 1rem 5% 0rem 5%;}
+    .contenido{margin-top: 10px;}
+
+    .noticia .listadoNoticias h1{
+        font-size: 21px;
+        margin-bottom: 8px;
+    }
+    .noticia .listadoNoticias a{ font-size: 16px;}
+    .noticia img{max-height: 180px;}
+
+    .noticia .datos{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .main .categoria{
+        padding: 3px 15px;
+        width: 50%;
+        order: 1;
+    }
+
+    .ultimasNoticias{margin-top: 50px;}
+    .ultimasNoticias h2{margin-bottom: 20px;}
+    .main .derecha{padding: 4px 10px;}
+}
